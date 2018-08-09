@@ -1,42 +1,42 @@
 class IngredientsController < ApplicationController
-  # def index
-  #   @ingredients = Ingredient.all
-  # end
+  def index
+    @ingredients = Ingredient.all
+  end
 
-  # def show
-  #   @ingredient = Ingredient.find(params[:id])
-  #   @cocktail = cocktail.new
-  #   @dose = dose.new
-  # end
+  def show
+    @ingredient = Ingredient.find(params[:id])
+    @cocktail = cocktail.new
+    @dose = dose.new
+  end
 
-  # def new
-  #   @ingredient = Ingredient.new
-  # end
+  def new
+    @ingredient = Ingredient.new
+  end
 
-  # def create
-  #   @ingredient = Ingredient.new(ingredient_params)
-  #   if @ingredient.save
-  #     redirect_to ingredient_path(@ingredient)
-  #   else
-  #     render "new"
-  #   end
-  # end
+  def create
+    @ingredient = Ingredient.new(ingredient_params)
+    if @ingredient.save
+      redirect_to ingredient_path(@ingredient)
+    else
+      render "new"
+    end
+  end
 
-  # def update
-  #   @ingredient = ingredient.update
+  def update
+    @ingredient = ingredient.update
 
-  # end
+  end
 
-  # def destroy
-  #   @ingredient = ingredient.destroy
+  def destroy
+    @ingredient = ingredient.destroy
 
-  # end
+  end
 
 
-  # private
+  private
 
-  # def ingredient_params
-  #   params.require(:ingredient).permit(:name)
-  # end
+  def ingredient_params
+    params.require(:ingredient).permit(:name)
+  end
 end
 
